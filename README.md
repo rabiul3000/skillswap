@@ -52,5 +52,7 @@ Whether you're here to teach, learn, or both—**SkillSwap** makes knowledge-sha
 💡 **Ready to dive in?** Clone the repo and let’s build this together!  
 
 ```bash
-l
+git clone https://github.com/rabiul3000/skillswap.git
+```  
+
 **Let’s learn, share, and grow—one micro-skill at a time!** 🚀
