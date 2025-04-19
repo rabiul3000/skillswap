@@ -1,10 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router';
 
-const Button = ({ value }) => {
+const Button = ({ value, to }) => {
 	return (
-		<button className='px-12 py-2 rounded-lg bg-cyan-400 font-bold active:scale-75 duration-500'>
+		<Link
+			to={to}
+			className='px-12 py-2 rounded-lg bg-indigo-500 text-white font-bold active:scale-75 duration-500'
+		>
 			{value}
-		</button>
+		</Link>
 	);
 };
 
