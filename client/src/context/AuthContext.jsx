@@ -6,7 +6,8 @@ const AuthProvider = ({ children }) => {
 	const [user, setUser] = useState(null);
 
 	useEffect(() => {
-		setUser({ email: 'rabiul@gmail.com', password: '12345' });
+		let user = { email: 'rabiul@gmail.com', password: '12345' };
+		setUser(user);
 	}, []);
 
 	return <AuthContext.Provider value={user}> {children} </AuthContext.Provider>;

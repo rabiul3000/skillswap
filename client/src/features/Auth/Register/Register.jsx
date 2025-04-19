@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import bgRegister from '../../../media/images/register-bg.jpg';
 import { Button, TextField } from '@mui/material';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import useAuth from '../useAuth';
 
 const Register = () => {
 	const [showPassword, setShowPassword] = useState(false);
 	const { validUser, loading, error, setError } = useAuth();
+	const navigate = useNavigate();
 
 	const handleSubmitForRegister = (e) => {
 		e.preventDefault();
@@ -16,7 +17,7 @@ const Register = () => {
 		};
 		let isValid = validUser(userData);
 		if (isValid) {
-			console.log('User registered successfully');
+			navigate('/login');
 		}
 	};
 

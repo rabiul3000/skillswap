@@ -7,14 +7,14 @@ const useAuth = () => {
 	const user = useContext(AuthContext);
 
 	const validUser = ({ email, password }) => {
+		setLoading(true);
 		try {
-			setLoading(true);
-			if (email !== user.email) throw new Error('Invalid email or password');
-			if (password !== user.password)
-				throw new Error('Invalid email or password');
+			if (email !== user.email) throw new Error('Invalid email adress');
+			if (password !== user.password) throw new Error('Wrong password');
 			return true;
 		} catch (error) {
 			setError(error.message);
+			return false;
 		} finally {
 			setLoading(false);
 		}
