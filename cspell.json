@@ -3,7 +3,12 @@
     "ignorePaths": [],
     "dictionaryDefinitions": [],
     "dictionaries": [],
-    "words": [],
-    "ignoreWords": ["Swal", "sweetalert2"],
+    "words": [
+        "tailwindcss"
+    ],
+    "ignoreWords": [
+        "Swal",
+        "sweetalert2"
+    ],
     "import": []
 }
