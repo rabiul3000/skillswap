@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
+import allData from '../../api/data.json';
 
 const useLoadData = () => {
 	const [data, setData] = useState([]);
@@ -12,23 +13,11 @@ const useLoadData = () => {
 			if (method === 'GET') {
 				const res = await axios.get(url);
 				if (res.status === 200) {
-					setData(res.data);
-				} else throw new Error('post not found');
-			}
-			if (method === 'POST') {
-				const res = await axios.get(url);
-				if (res.status === 200) {
-					setData(res.data);
-				} else throw new Error('post not found');
-			}
-			if (method === 'PUT') {
-				const res = await axios.get(url);
-				if (res.status === 200) {
-					setData(res.data);
-				} else throw new Error('post not found');
+					setData(allData);
+				}
 			}
 		} catch (error) {
-			setError(error.message);
+			setError(error.response.data.message || error.message);
 		} finally {
 			setLoading(false);
 		}

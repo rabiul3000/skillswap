@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "client": "cd client && npm run dev",
-    "server" : "cd server && npm run start"
+    "server": "cd server && npm run start"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^4.1.0"
+  }
 }

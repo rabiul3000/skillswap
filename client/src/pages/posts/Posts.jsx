@@ -1,17 +1,10 @@
-import React, { useEffect } from 'react';
-import { allPostUrl } from '../../api/urls';
-import useLoadData from './useLoadData';
+import React from 'react';
+import LoadingState from '../../components/LoadingState';
 
 const Posts = () => {
-	const { data, loading, error, loadData } = useLoadData();
-
-	useEffect(() => {
-		loadData('GET', allPostUrl);
-	}, []);
-
 	return (
 		<div>
-			<h1>Posts</h1>
+			<h1>This is Post page</h1>
 		</div>
 	);
 };
